@@ -1,0 +1,22 @@
+@use "../../Foundation/mixin" as m;
+
+
+.p-contact {
+    padding:8% 10%;
+    @include m.mq(sp){
+        padding:50px 20px;
+    }
+    &__information {
+        padding-bottom:60px;
+    }
+    form {
+        display:block;
+        align-items: center;
+        width:100%;
+        label {
+            margin-bottom:30px;
+            background-color: #fff;
+        }
+    }
+}
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+ <head>
+ <meta charset="utf-8">
+ <title>news</title>
+ <meta name="description" content="WEDのホームページです">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <!--CSS--> <!--Googlefontは今回はなし-->
+ <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css"> 
+ <link rel="stylesheet" href="scss/style.css"> 
+ </head>
+
+
+<body>
+   <header class="l-header">
+      <div class="p-header">
+         <h1 class="p-header__title c-title">WED</h1>
+         <nav class="p-header__nav">
+            <ul class="p-header__nav__menu">
+               <li class="p-header__nav__menu__list"><a href="#">NEWS</a></li>
+               <li class="p-header__nav__menu__list"><a href="#">ABOUT</a></li>
+               <li class="p-header__nav__menu__list"><a href="#">ITEMS</a></li>
+               <li class="p-header__nav__menu__list"><a href="#">COMPANY</a></li>
+            </ul>
+         </nav>  
+      </div>
+      <div class="p-header__button">
+         <button class="p-header__button__contact c-button"type=“button” onclick="location.href='#'">資料請求</button>
+      </div>
+   </header>
+
+   <main>
+      <section class="p-news">
+         <div class="p-title">
+            <h2 class="c-title">News</h2>
+            <p class="c-title__sub">ニュース</p> 
+         </div>
+         <div class="p-news__post">
+            <article class="p-news__post__detail">
+               <time datetime=”2021-1-1” itemprop=”datepublished”>2021.01.01</time><p class="p-news__post__detail__mark">カテゴリ名</p>
+               <h3 class="p-single__title">タイトルタイトルタイトルタイトル</h3>
+               <p>ニュースの記事が入ります。ニュースの記事が入ります。</p>
+               <div class="c-mainvisual">
+                  <img src="images/liquorshop_main.jpeg">
+               </div>
+            </article>
+         </div>
+      </section>
+
+      <!--WP化時にpaging追加する-->
+
+
+   </main>
+
+<footer class="p-footer">
+   <div class="p-footer__title">
+         <p class="c-title">WED</p>
+   </div>
+   <div class="p-footer__address">
+      <p>copyright 2022 WED</p>
+      <p>お問い合わせ：090-4578-****</p>
+   </div>
+</footer>
+
+
+<!--jQuery-->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>            
+   <script src="script.js"></script>          
+
+   </body>
+</html>

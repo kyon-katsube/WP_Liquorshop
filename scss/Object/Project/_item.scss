@@ -1,0 +1,48 @@
+@use "../../Foundation/mixin" as m;
+
+.p-item{
+    padding:8% 10%;
+    @include m.mq(sp){
+        padding:50px 10px;
+    }
+    &__contents__figures {
+        padding:50px 50px 0 50px;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap:10%;
+        @include m.mq(sp){
+            display:block;
+            padding:50px 0 0 0 ;
+        }
+        &__first {
+            padding:100px 0 50px 0;
+            @include m.mq(sp){
+                padding:0 0;
+            }
+            figure {
+                padding-bottom:50px;
+                @include m.mq(sp){
+                    padding-bottom:2rem;
+                }
+                figcaption {
+                    padding:20px 0;
+                }
+            }           
+        }
+        &__second {
+            padding:0 0 50px 0;
+            @include m.mq(sp){
+                padding:0 0 0 0 ;
+            }
+            figure {
+                padding-bottom:50px;
+                @include m.mq(sp){
+                    padding-bottom:2rem;
+                }
+                figcaption {
+                    padding:20px 0;
+                }
+            }           
+        }
+    }
+}

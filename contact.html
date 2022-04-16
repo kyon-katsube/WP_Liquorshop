@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+ <head>
+ <meta charset="utf-8">
+ <title>contact</title>
+ <meta name="description" content="WEDのホームページです">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <!--CSS--> <!--Googlefontは今回はなし-->
+ <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css"> 
+ <link rel="stylesheet" href="scss/style.css"> 
+ </head>
+
+
+<body>
+   <header class="l-header">
+      <div class="p-header">
+         <h1 class="p-header__title c-title">WED</h1>
+         <nav class="p-header__nav">
+            <ul class="p-header__nav__menu">
+               <li class="p-header__nav__menu__list"><a href="#">NEWS</a></li>
+               <li class="p-header__nav__menu__list"><a href="#">ABOUT</a></li>
+               <li class="p-header__nav__menu__list"><a href="#">ITEMS</a></li>
+               <li class="p-header__nav__menu__list"><a href="#">COMPANY</a></li>
+            </ul>
+         </nav>  
+      </div>
+      <div class="p-header__button">
+         <button class="p-header__button__contact c-button"type=“button” onclick="location.href='#'">資料請求</button>
+      </div>
+   </header>
+
+   <main>
+      <div class="p-contact">
+         <h2 class="p-archive__title c-title">Contact</h2>
+         <div class="p-contact__information">
+            <p>お仕事のご依頼やご相談は以下のフォームからお問い合わせください。</p>
+         </div>
+         <form action="#" method="post" name="contact-form">
+            <label for="name"></label>Name<span>*</span><input id="name" type="text">
+            <label for="email"></label>E-mail<span>*</span><input id="email" type="email">            <label for="message"></label>Message<span>*</span><textarea id="message" name="message"></textarea>
+         </form>
+      </div>
+
+   </main>
+
+   <footer class="p-footer">
+      <div class="p-footer__title">
+          <p class="c-title">WED</p>
+      </div>
+      <div class="p-footer__address">
+         <p>copyright 2022 WED</p>
+         <p>お問い合わせ：090-4578-****</p>
+      </div>
+   </footer>
+
+
+   <!--jQuery-->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>            
+   <script src="script.js"></script>          
+
+</body>
+</html>

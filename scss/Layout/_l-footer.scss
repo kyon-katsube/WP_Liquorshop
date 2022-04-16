@@ -1,0 +1,10 @@
+@use "../Foundation/mixin" as m;
+
+
+.l-footer {
+    background-color:#fff;
+    height:200px;
+    display:flex;
+    justify-content: space-between;
+   
+ }//footerの閉じタグ

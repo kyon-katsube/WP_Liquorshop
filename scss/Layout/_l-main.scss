@@ -1,0 +1,9 @@
+@use "../Foundation/mixin" as m;
+
+
+.l-main {     //main
+    @include m.mq(pc) {
+        grid-row:2/3;
+        grid-column:1/2 ;
+    }
+}
