@@ -18,8 +18,8 @@ Text Domain: Corporate_code2
 
 //Layout
 @use "Layout/l-header";
-// @use "Layout/l-main";
-// @use "Layout/l-footer";
+@use "Layout/l-main";
+@use "Layout/l-footer";
 
 //Object
 /* Component--------------------- */
@@ -39,5 +39,6 @@ Text Domain: Corporate_code2
 @use "Object/Project/archive";
 @use "Object/Project/contact";
 @use "Object/Project/single";
+@use "Object/Project/tab";
 
 /* Utility----------------------- */

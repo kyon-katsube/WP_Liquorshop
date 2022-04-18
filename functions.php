@@ -45,18 +45,33 @@ add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
 
 
 //投稿アーカイブを表示する
-add_filter('register_post_type_args', function($args, $post_type) {
-  if ('post' == $post_type) {
-      global $wp_rewrite;
-      $archive_slug = 'news'; //URLスラッグ
-      $args['label'] = '投稿'; //管理画面左ナビに「投稿」の代わりに表示される
-      $args['has_archive'] = $archive_slug;
-      $archive_slug = $wp_rewrite->root.$archive_slug;
-      $feeds = '(' . trim( implode('|', $wp_rewrite->feeds) ) . ')';
-      add_rewrite_rule("{$archive_slug}/?$", "index.php?post_type={$post_type}", 'top');
-      add_rewrite_rule("{$archive_slug}/feed/{$feeds}/?$", "index.php?post_type={$post_type}".'&feed=$matches[1]', 'top');
-      add_rewrite_rule("{$archive_slug}/{$feeds}/?$", "index.php?post_type={$post_type}".'&feed=$matches[1]', 'top');
-      add_rewrite_rule("{$archive_slug}/{$wp_rewrite->pagination_base}/([0-9]{1,})/?$", "index.php?post_type={$post_type}".'&paged=$matches[1]', 'top');
+// function post_has_archive( $args, $post_type ) {
+// 	if ( 'post' == $post_type ) {
+// 		$args['rewrite'] = true;
+// 		$args['has_archive'] = 'news'; //今回は/news/というURLにする
+// 	}
+// 	return $args;
+// }
+// add_filter( 'register_post_type_args', 'post_has_archive', 10, 2 );
+
+
+
+// 投稿と固定ページ一覧にスラッグの列を追加
+function add_posts_columns_slug($columns) {
+  $columns['slug'] = 'スラッグ';
+  echo '';
+  return $columns;
+}
+add_filter( 'manage_posts_columns', 'add_posts_columns_slug' );
+add_filter( 'manage_pages_columns', 'add_posts_columns_slug' );
+
+// スラッグを表示
+function custom_posts_columns_slug($column_name, $post_id) {
+  if( $column_name == 'slug' ) {
+      $post = get_post($post_id);
+      $slug = $post->post_name;
+      echo esc_attr($slug);
   }
-  return $args;
-}, 10, 2);
+}
+add_action( 'manage_posts_custom_column', 'custom_posts_columns_slug', 10, 2 );
+add_action( 'manage_pages_custom_column', 'custom_posts_columns_slug', 10, 2 );

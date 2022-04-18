@@ -12,11 +12,8 @@ $( function() {
 
 //News＆Pressのタブ切り替え
 jQuery(function($){
-  // 「tab」クラスをクリックした場合の挙動
   $('.tab').on('click',function(){
-
-    // クリックした要素が何番目かを定数に入れる
-    var idx=$('.tab').index(this);
+    var idx=$('.tab').index(this);  // クリックした要素が何番目かを定数に入れる
 
     // (this).addClass('is-active')で、「is-active」クラスをクリックした要素に付与し、
     // siblings('.tab').removeClass('is-active')で、その他の兄弟要素からは「is-active」クラスを取り除く
@@ -33,3 +30,5 @@ jQuery(function($){
     $('.panel').eq(idx).addClass('is-show');
   });
 });
+
+
