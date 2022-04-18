@@ -130,14 +130,16 @@ img {
 
 .p-news__post {
   margin-top: 50px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-between;
-  gap: 50px;
+  gap: 30px;
   font-size: 14px;
   line-height: 2rem;
 }
 @media screen and (max-width:900px) {
   .p-news__post {
+    display: flex;
     flex-direction: column;
   }
 }
@@ -169,6 +171,19 @@ img {
 }
 .p-news__post__detail:last-child {
   padding-right: 30px;
+}
+
+.p-news__post__button {
+  margin-top: 50px;
+  margin-left: auto;
+  width: 120px;
+  height: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.p-news__post__button__next {
+  color: #000;
+  font-size: 14px;
 }
 
 .p-title {
