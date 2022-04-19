@@ -11,24 +11,25 @@ $( function() {
 
 
 //News＆Pressのタブ切り替え
-jQuery(function($){
-  $('.tab').on('click',function(){
-    var idx=$('.tab').index(this);  // クリックした要素が何番目かを定数に入れる
+$(function(){    
+    //tabactiveがついている__post でないものはhideする
+    $(".p-archive__post:not('.tabactive + .p-archive__post')").hide();       
+    
+    //カテゴリ部分をホバーしたときの表示
+    $(".p-archive__tab__menu__category").hover(
+      function(){
+        $(this).addClass("hover")
+        },
+      function(){
+        $(this).removeClass("hover")
+    }); 
 
-    // (this).addClass('is-active')で、「is-active」クラスをクリックした要素に付与し、
-    // siblings('.tab').removeClass('is-active')で、その他の兄弟要素からは「is-active」クラスを取り除く
-    // これにより、今押されているタブがどれかがわかるようになる。
-    $(this).addClass('is-active').siblings('.tab').removeClass('is-active'); 
-
-    // 「tab-group」に一致する箇所を探し、
-    // その次の「panel-group」要素を持っている要素から「panel」クラスを探し、
-    // 「is-show」クラスを取り除く
-    $(this).closest('.tab-group').next('.panel-group').find('.panel').removeClass('is-show');
-
-    // クリックした要素に一致する「panel」クラスに「is-show」クラスを付与する
-    // これにより、押されたタブの内容が表示されるようになる。
-    $('.panel').eq(idx).addClass('is-show');
-  });
+    //クリックしたときの挙動
+    $(".p-archive__tab__menu__category").click(function(){
+        
+        $(".p-archive__tab__menu__category").removeClass("tabactive");
+        $(this).addClass("tabactive");
+        $(".p-archive__post:not('.tabactive + .p-archive__post')").fadeOut();
+    $(".tabactive + .p-archive__post").fadeIn();      
+    });
 });
-
-

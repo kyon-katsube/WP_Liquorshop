@@ -25,7 +25,6 @@ Text Domain: Corporate_code2
 /* Component--------------------- */
 @use "Object/Component/title";
 @use "Object/Component/button";
-@use "Object/Component/underline";
 
 /* Project------------------------ */
 @use "Object/Project/header";
@@ -39,6 +38,5 @@ Text Domain: Corporate_code2
 @use "Object/Project/archive";
 @use "Object/Project/contact";
 @use "Object/Project/single";
-@use "Object/Project/tab";
 
 /* Utility----------------------- */

@@ -44,7 +44,7 @@ function add_additional_class_on_li($classes, $item, $args){
 add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
 
 
-//投稿アーカイブを表示する
+//投稿アーカイブを表示する →固定ページhome.phpを作成し投稿トップに設定する形に変更
 // function post_has_archive( $args, $post_type ) {
 // 	if ( 'post' == $post_type ) {
 // 		$args['rewrite'] = true;
