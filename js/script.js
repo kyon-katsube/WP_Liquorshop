@@ -11,25 +11,29 @@ $( function() {
 
 
 //News＆Pressのタブ切り替え
-$(function(){    
-    //tabactiveがついている__post でないものはhideする
-    $(".p-archive__post:not('.tabactive + .p-archive__post')").hide();       
-    
-    //カテゴリ部分をホバーしたときの表示
-    $(".p-archive__tab__menu__category").hover(
-      function(){
-        $(this).addClass("hover")
-        },
-      function(){
-        $(this).removeClass("hover")
-    }); 
+$ (function(){
 
-    //クリックしたときの挙動
-    $(".p-archive__tab__menu__category").click(function(){
-        
-        $(".p-archive__tab__menu__category").removeClass("tabactive");
-        $(this).addClass("tabactive");
-        $(".p-archive__post:not('.tabactive + .p-archive__post')").fadeOut();
-    $(".tabactive + .p-archive__post").fadeIn();      
-    });
-});
+    //カテゴリ名をホバーしたとき
+    $(".p-archive__contents__tab__category").hover(function(){
+          $(this).addClass("hover")},
+          function(){
+          $(this).removeClass("hover");
+    });      
+
+    $('.p-archive__contents__tab__category').on('click',function(){
+        var idx=$('.p-archive__contents__tab__category').index(this);
+        $(this).addClass('is-active').siblings('.p-archive__contents__tab__category').removeClass('is-active');
+        $(this).closest('.p-archive__contents__tab').next('.p-archive__contents__post').find('.p-archive__contents__post__wrapper').removeClass('is-show');
+        $('.p-archive__contents__post__wrapper').eq(idx).addClass('is-show');
+      });
+
+
+//     //クリックしたときの挙動  別の記述
+//     $(".p-archive__wrapper__news").click(function(){     
+//         $(".p-archive__post-news").removeClass("tabactive");
+//         $(this).addClass("tabactive");
+//         $(".p-archive__post-news:not('.tabactive + .p-archive__post-news')").fadeOut();
+//     $(".tabactive + .p-archive__post-news").fadeIn();      
+//     });
+
+});  //functionの閉じかっこ
