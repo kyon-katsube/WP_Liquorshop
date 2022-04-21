@@ -20,20 +20,12 @@ $ (function(){
           $(this).removeClass("hover");
     });      
 
-    $('.p-archive__contents__tab__category').on('click',function(){
+    //カテゴリ名をクリックしたとき
+    $('.p-archive__contents__tab__category').click(function(){
+        //p-archive--の要素の順番を取得したものをidxという変数として定義する
         var idx=$('.p-archive__contents__tab__category').index(this);
-        $(this).addClass('is-active').siblings('.p-archive__contents__tab__category').removeClass('is-active');
-        $(this).closest('.p-archive__contents__tab').next('.p-archive__contents__post').find('.p-archive__contents__post__wrapper').removeClass('is-show');
-        $('.p-archive__contents__post__wrapper').eq(idx).addClass('is-show');
+        //取得した変数と同じ階層のデータを取得する
+        $('.p-archive__contents__post__wrapper').removeClass('is-show').eq(idx).addClass('is-show');
       });
-
-
-//     //クリックしたときの挙動  別の記述
-//     $(".p-archive__wrapper__news").click(function(){     
-//         $(".p-archive__post-news").removeClass("tabactive");
-//         $(this).addClass("tabactive");
-//         $(".p-archive__post-news:not('.tabactive + .p-archive__post-news')").fadeOut();
-//     $(".tabactive + .p-archive__post-news").fadeIn();      
-//     });
 
 });  //functionの閉じかっこ

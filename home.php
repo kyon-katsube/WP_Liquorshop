@@ -7,13 +7,13 @@
          <div class="p-archive__contents">  <!--full content-->
 
             <div class="p-archive__contents__tab"> <!--タブのくくり--><!--tabmenu tabactive mr01-->
-               <p class="p-archive__contents__tab__category is-active">すべての記事</p>
+               <p class="p-archive__contents__tab__category">すべての記事</p>
                <p class="p-archive__contents__tab__category">ニュース</p>
                <p class="p-archive__contents__tab__category">プレスリリース</p>
             </div>
 
             <div class="p-archive__contents__post">
-               <section class="p-archive__contents__post__wrapper is-show">  <!--すべての記事を取得-->
+               <section class="p-archive__contents__post__wrapper">  <!--すべての記事を取得-->
                      <?php query_posts('posts_per_page=5'); ?>
                         <?php if (have_posts()):while(have_posts()):the_post();?>
                            <article class="p-archive__contents__post__detail">
@@ -33,7 +33,7 @@
                         <?php endif;?>
                </section>
             
-               <section class="p-archive__contents__post__wrapper"> <!--category newsの記事を取得-->
+               <section class="p-archive__contents__post__wrapper is-show"> <!--category newsの記事を取得-->
                   <?php
                      $newslist = get_posts( array(
                      'category_name' => 'news', //特定のカテゴリースラッグを指定

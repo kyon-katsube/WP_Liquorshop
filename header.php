@@ -17,7 +17,7 @@
    <?php wp_body_open();?>
       <header class="l-header">
          <div class="p-header">
-            <h1 class="p-header__title c-title"><?php bloginfo('name')?></h1>  
+            <h1 class="p-header__title c-title"><a href="<?php echo esc_url(home_url('/'));?>"><?php bloginfo('name')?></h1>  
                 <?php
                   wp_nav_menu(array(
                      'menu'=>'main-menu',  //管理画面で作成したメニュー名
