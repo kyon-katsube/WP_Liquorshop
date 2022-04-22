@@ -65,6 +65,9 @@ img {
   font-size: 40px;
   padding-right: 100px;
 }
+.p-header__title a {
+  color: #000;
+}
 @media screen and (max-width:900px) {
   .p-header__title {
     text-align: left;
@@ -110,6 +113,13 @@ img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
+}
+
+.p-page__contents__mainvisual {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: auto;
 }
 
 .p-news {
@@ -385,6 +395,7 @@ img {
 @media screen and (max-width:900px) {
   .p-archive__title {
     padding-bottom: 80px;
+    font-size: 32px;
   }
 }
 .p-archive__contents {
@@ -412,22 +423,27 @@ img {
   cursor: pointer;
 }
 
-.p-archive__contents__post .is-show {
+.p-archive__contents__post__wrapper {
+  display: none;
+}
+
+.p-archive__contents__post__wrapper .is-show {
   display: block;
   font-size: 14px;
   line-height: 2rem;
   text-align: left;
 }
-.p-archive__contents__post .is-show__detail {
+
+.p-archive__contents__post__detail {
   padding: 30px 0;
   border-bottom: 1px solid #ccc;
 }
-.p-archive__contents__post .is-show__detail a {
+.p-archive__contents__post__detail a {
   text-decoration: none;
   cursor: pointer;
   color: #000;
 }
-.p-archive__contents__post .is-show__detail a:hover {
+.p-archive__contents__post__detail a:hover {
   font-weight: bold;
   cursor: pointer;
 }
@@ -458,6 +474,58 @@ img {
   font-weight: normal;
   line-height: 1.2rem;
   padding: 20px 0;
+}
+
+.p-archive {
+  padding: 8% 10%;
+}
+@media screen and (max-width:900px) {
+  .p-archive {
+    padding: 50px 20px;
+  }
+}
+.p-archive__title {
+  letter-spacing: 0.8rem;
+  padding-bottom: 20px;
+}
+@media screen and (max-width:900px) {
+  .p-archive__title {
+    padding-bottom: 20px;
+    font-size: 32px;
+  }
+}
+
+.p-page__contents {
+  line-height: 2rem;
+}
+.p-page__contents h2 {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 2rem;
+  padding-bottom: 80px;
+}
+.p-page__contents .wp-block-table table {
+  margin-top: 30px;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #000;
+}
+.p-page__contents .wp-block-table table td {
+  padding: 20px 0 20px 20px;
+  border: 0.5px solid #000;
+}
+
+.wp-block-group__inner-container {
+  margin: 80px 0 0 auto;
+  line-height: 2rem;
+}
+@media screen and (max-width:900px) {
+  .wp-block-group__inner-container {
+    margin: 50px 50px 0 auto;
+  }
+}
+.wp-block-group__inner-container p {
+  line-height: 2rem;
 }
 
 /*

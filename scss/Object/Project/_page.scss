@@ -1,0 +1,48 @@
+@use "../../Foundation/mixin" as m;
+
+
+.p-archive{
+    padding:8% 10%;
+    @include m.mq(sp){
+        padding:50px 20px;
+    }
+    &__title {
+        letter-spacing: 0.8rem;
+        padding-bottom:20px;
+        @include m.mq(sp){
+            padding-bottom:20px;
+            font-size:32px;
+        }
+    }
+}
+
+.p-page__contents {
+    line-height: 2rem;
+    h2{
+    font-size:14px;
+    font-weight:normal;
+    line-height: 2rem;
+    padding-bottom:80px;
+    }
+    .wp-block-table table{   //companyの会社概要テーブル用
+        margin-top:30px;
+        width:100%;
+        border-collapse: collapse; //ボーダーを重ねる
+        border:1px solid #000;
+        td {
+            padding:20px 0 20px 20px; 
+            border:0.5px solid #000;
+        }
+    }
+}
+
+.wp-block-group__inner-container { //説明文　グループ化する
+    margin:80px 0 0 auto;
+    line-height: 2rem;
+    @include m.mq(sp){
+        margin:50px 50px 0 auto;
+    }
+    p{
+        line-height: 2rem;
+    }
+}

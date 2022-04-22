@@ -16,6 +16,9 @@
     &__title{
         font-size:40px;
         padding-right:100px;
+        & a {
+            color:#000;
+        }
         @include m.mq(sp){
           text-align: left;
           padding-right:230px;

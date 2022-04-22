@@ -2,9 +2,9 @@
 
    <main>
       <div class="p-archive">
-         <h2 class="p-archive__title c-title">News & Press</h2>
+         <h1 class="p-archive__title c-title">News & Press</h1>
 
-         <div class="p-archive__contents">  <!--full content-->
+         <div class="p-archive__contents">
 
             <div class="p-archive__contents__tab"> <!--タブのくくり--><!--tabmenu tabactive mr01-->
                <p class="p-archive__contents__tab__category">すべての記事</p>
