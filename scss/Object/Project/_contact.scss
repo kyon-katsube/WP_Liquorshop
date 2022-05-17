@@ -16,6 +16,9 @@
         label {
             margin-bottom:30px;
             background-color: #fff;
+            span >input {
+                text-indent: 1em;
+            }   
         }
     }
 }

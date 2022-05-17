@@ -36,8 +36,11 @@ Text Domain: Corporate_code2
 @use "Object/Project/company";
 @use "Object/Project/footer";
 @use "Object/Project/home";
-@use "Object/Project/contact";
 @use "Object/Project/single";
 @use "Object/Project/page";
+@use "Object/Project/contact-form";
+@use "Object/Project/pager";
 
 /* Utility----------------------- */
+@use "Object/Utility/margin-bottom-60";
+@use "Object/Utility/single-h1-padding";

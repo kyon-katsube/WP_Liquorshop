@@ -10,7 +10,7 @@
     @include m.mq(sp){
         flex-direction: column;
         padding-left:20px;
-        padding-top:20px;
+        padding-top:40px;
         padding-bottom:20px;
     }
     &__title{
@@ -22,11 +22,12 @@
         @include m.mq(sp){
           text-align: left;
           padding-right:230px;
-          padding-bottom:5px;
+          padding-bottom:20px;
         }
     }
     &__nav {
-        font-size:14px;     
+        font-size:14px;
+        padding-bottom:20px;     
         &__menu{  //ul
             display:flex;
             
@@ -34,6 +35,7 @@
                 text-decoration: none;
                 list-style-type: none;
                 padding-right:30px;
+               
                 a {
                 color:black;
                 cursor:pointer;
@@ -45,16 +47,16 @@
 
 .p-header__button {
     width:200px;
-    height:80px;
+    height:100px;
     background-color:black;
     display:flex;
     align-items: center;
     cursor:pointer;
     &__contact {
-    color:white;
-    margin:0 auto;
+        color:white;
+        margin:0 auto;
     }
-    @include m.mq(sp){
-        display:none;
+    @media screen and (max-width: 767px) {
+        display: none;
     }
 }

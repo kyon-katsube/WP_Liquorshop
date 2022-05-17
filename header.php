@@ -30,6 +30,6 @@
                ?>
          </div>
          <div class="p-header__button">
-            <button class="p-header__button__contact c-button"type=“button” onclick="location.href='#'">お問い合わせ</button>
+            <button class="p-header__button__contact c-button"type=“button” onclick="location.href='/contact'">お問い合わせ</button>
          </div>
       </header>

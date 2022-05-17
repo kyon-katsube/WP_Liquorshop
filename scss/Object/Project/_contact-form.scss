@@ -1,0 +1,16 @@
+.p-contact-form{    //お名前以下の枠線
+    & .wpcf7-form-control{
+    width:100%;
+    border:0.5px solid gray;
+    background-color:#fff;
+    }
+}
+
+.p-contact-form__submit{  //送信ボタン
+    & input {
+        width:100px;   
+        border-style: inherit; 
+        border:0.5px solid gray;
+        background-color:#fff;
+    }
+}

@@ -19,15 +19,7 @@
            <?php query_posts('posts_per_page=3'); ?>
              <?php if (have_posts()):while(have_posts()):the_post();?>
                <article class="p-news__post__detail">
-                  <time><?php echo get_the_date('Y.m.d');?></time>  <!--echoにしておけば同日で複数投稿があっても表示される-->
-                  <p class="p-news__post__detail__mark"> <!--カテゴリ名を取得・表示-->
-                     <?php
-                        $cat = get_the_category();
-                        $cat = $cat[0]; {
-                           echo $cat->cat_name;
-                        }
-                     ?>
-                  </p>
+                 <?php get_template_part('post-category');?>    <!--日付・カテゴリ名を呼び出し-->  
                   <p><a href="<?php the_permalink();?>"><?php the_title();?></a></p>
                </article>
             <?php endwhile;else:?>
@@ -35,7 +27,7 @@
             <?php endif;?>
          </div>
          <div class="p-news__post__button">
-               <button class="p-news__post__button__next c-button"type=“button” onclick="location.href='/index.php?page_id=25'">他の記事へ→</button>
+               <button class="p-news__post__button__next c-button"type=“button” onclick="location.href='/news'">他の記事へ→</button>
          </div>  
       </section>
 

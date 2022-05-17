@@ -19,8 +19,22 @@
         @include m.mq(sp){
         padding-bottom:50px;
         }
+        a {
+            color:#000;
+        }
     }
     &__address {
         line-height: 2rem;
+        >a {
+            color:#000;
+            pointer-events: none;
+        }
+        &__privacy-policy a {
+            color:#000;
+            cursor:pointer;
+            &:hover{
+                color:#0000ee;
+            }
+        }
     }
 }
