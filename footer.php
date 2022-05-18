@@ -10,5 +10,13 @@
 </footer>
 
 <?php wp_footer();?>
+
+<!--contact form7の送信完了ページへの遷移-->
+<script>
+   document.addEventListener( 'wpcf7mailsent', function( event ) {
+   location = 'https://katsube-liquor.group/thanks/';
+   }, false );
+</script>
+
 </body>
 </html>
