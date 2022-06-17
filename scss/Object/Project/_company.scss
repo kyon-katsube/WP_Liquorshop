@@ -2,8 +2,11 @@
 
 .p-company{
     padding:8% 10%;
+    display:flex;
+    justify-content: space-between;
     position:relative;
     @include m.mq(sp){
+        display:block;
         padding:50px 10px;
     }
     &__contents {
@@ -17,15 +20,16 @@
         }
     }
     &__img {  
-        position:absolute;
         z-index:1;
-        top:180px;
         right:10%;
+        width:40%;
+        position:absolute;
         @include m.mq(sp){
             position:inherit;
             z-index:0;
             top:inherit;
             right:inherit;
+            width:inherit;
         }
         img {
            display:block;

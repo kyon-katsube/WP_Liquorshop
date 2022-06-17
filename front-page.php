@@ -3,9 +3,9 @@
    <main>
       <div class="p-mainvisual">
          <ul class="p-mainvisual__slider">
-            <li><img src="<?php echo esc_url(get_theme_file_uri('/images/liquorshop_main.jpeg'));?>" alt="酒屋イメージ"></li>
-            <li><img src="<?php echo esc_url(get_theme_file_uri('/images/liquorshop_main_sake.jpeg'));?>" alt="お酒イメージ"></li>
-            <li><img src="<?php echo esc_url(get_theme_file_uri('/images/liquorshop_main_wine.jpeg'));?>" alt="ワインイメージ"></li>
+            <li><img src="<?php echo esc_url(get_theme_file_uri('/images/liquorshop_main.jpg'));?>" alt="酒屋イメージ"></li>
+            <li><img src="<?php echo esc_url(get_theme_file_uri('/images/liquorshop_main_sake.jpg'));?>" alt="お酒イメージ"></li>
+            <li><img src="<?php echo esc_url(get_theme_file_uri('/images/liquorshop_main_wine.jpg'));?>" alt="ワインイメージ"></li>
         </ul>
       </div>
 
@@ -58,21 +58,21 @@
                <div class="p-item__contents__figures__first">
                   <figure>
                      <figcaption>－日本酒</figcaption>
-                     <img src="<?php echo esc_url(get_theme_file_uri('/images/liquorshop_item_japanese-sake.jpeg'));?>" href="<?php the_permalink();?>">
+                     <img src="<?php echo esc_url(get_theme_file_uri('/images/liquorshop_item_japanese-sake.jpg'));?>" href="<?php the_permalink();?>">
                   </figure>
                   <figure>
                      <figcaption>－ビール</figcaption>
-                     <img src="<?php echo esc_url(get_theme_file_uri('/images/liquorshop_item_beer.jpeg'));?>">
+                     <img src="<?php echo esc_url(get_theme_file_uri('/images/liquorshop_item_beer.jpg'));?>">
                   </figure>
                </div>
                <div class="p-item__contents__figures__second">
                   <figure>
                      <figcaption>－焼酎</figcaption>
-                     <img src="<?php echo esc_url(get_theme_file_uri('/images/liquorshop_item_shochu.jpeg'));?>">
+                     <img src="<?php echo esc_url(get_theme_file_uri('/images/liquorshop_item_shochu.jpg'));?>">
                   </figure>
                   <figure>
                      <figcaption>－ワイン</figcaption>
-                     <img src="<?php echo esc_url(get_theme_file_uri('/images/liquorshop_item_wine.jpeg'));?>">
+                     <img src="<?php echo esc_url(get_theme_file_uri('/images/liquorshop_item_wine.jpg'));?>">
                   </figure>
                </div>
             </div>
@@ -100,9 +100,14 @@
             </dl>
          </div>
          <div class="p-company__img">
-         <img src="<?php echo esc_url(get_theme_file_uri('/images/liquorshop_company.jpeg'));?>">
+         <img src="<?php echo esc_url(get_theme_file_uri('/images/liquorshop_company.jpg'));?>">
          </div>
       </section>
    </main>
+
+   <!--SP版の時用のお問い合わせボタン-->
+   <div class="p-footer__button">
+      <button class="p-footer__button__contact c-button"type=“button” onclick="location.href='/contact'">お問い合わせはこちら</button>
+   </div>
 
 <?php get_footer();?>

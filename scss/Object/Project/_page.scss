@@ -2,7 +2,10 @@
 
 
 .p-archive{  //固定ページ共通 home.phpはサブタイトルがないのでuでmargin追加
-    padding:8% 10%;
+    padding-top:8%;
+    padding-bottom:8%;
+    margin:0 auto;
+    max-width:1000px;
     @include m.mq(sp){
         padding:50px 20px;
     }

@@ -7,16 +7,33 @@
     text-decoration: none;
     color:#000;
     list-style:none; 
+   
     &__wrapper {
         margin:0 50px;
+        @include m.mq(sp){
+            margin:0;
+        }
         &__back,
         &__next {
             list-style:none;  
             color:#000;
             padding:0 50px;
+            @include m.mq(sp){
+                font-size:14px;     
+            }
             &:hover {
                 cursor:pointer;
                 color:#0000ee;
+            }
+        }
+        &__back {
+            @include m.mq(sp){
+                padding-right:30px;
+            }
+        }
+        &__next {
+            @include m.mq(sp){
+                padding-left:30px;
             }
         }
     }
